@@ -1,0 +1,312 @@
+/* Custom Properties */
+:root {
+    --primary-color: #7C4A26;     /* Warm bruin */
+    --secondary-color: #4A6741;    /* Dennegroen */
+    --accent-color: #DB9B3E;       /* Warm oranje */
+    --text-color: #2C2518;         /* Donker bruin */
+    --background-light: #FDF8F3;   /* Zacht crème */
+    --background-dark: #F4EDE4;    /* Warm beige */
+    --card-bg: #FFFFFF;
+    --hover-shadow: 0 8px 20px rgba(124, 74, 38, 0.15);
+    --natural-highlight: #E8C097;  /* Licht hout */
+    --footer-color: #3D3426;       /* Donker hout */
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--background-light);
+    background-image: linear-gradient(45deg, var(--background-light) 0%, var(--background-dark) 100%);
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(165deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+    position: relative;
+    margin-bottom: 3rem;
+    border-bottom: 8px solid var(--accent-color);
+}
+
+.top-cta {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.top-cta:hover {
+    transform: translateY(-2px);
+    background-color: #C48835;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* Section Styles */
+.section {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Benefits Section */
+.benefits-section {
+    background-color: var(--background-dark);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    margin: 4rem auto;
+    max-width: 1200px;
+    border: 2px solid var(--natural-highlight);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.benefit-item {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(124, 74, 38, 0.08);
+    border: 1px solid var(--natural-highlight);
+}
+
+.benefit-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Typography */
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    font-family: 'Georgia', serif;
+}
+
+.header-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 2rem auto 4rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(124, 74, 38, 0.1);
+}
+
+/* Product Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin: 2rem 0;
+}
+
+.product-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(124, 74, 38, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    border: 1px solid var(--natural-highlight);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--hover-shadow);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-content {
+    padding: 1.8rem;
+    background: linear-gradient(to bottom, var(--card-bg), var(--background-light));
+    border-top: 3px solid var(--accent-color);
+}
+
+.product-title {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    font-family: 'Georgia', serif;
+}
+
+.product-description {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.product-features {
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.product-features li {
+    margin-bottom: 0.5rem;
+    list-style: none;
+    padding-left: 1.8rem;
+    position: relative;
+}
+
+.product-features li:before {
+    content: '🌿';
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+    padding: 2rem;
+    background: var(--background-dark);
+    border-radius: 12px;
+    border: 2px solid var(--natural-highlight);
+}
+
+.feature-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(124, 74, 38, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--natural-highlight);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-family: 'Georgia', serif;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-color);
+    color: white;
+    padding: 4rem 2rem;
+    margin-top: 6rem;
+    border-top: 8px solid var(--accent-color);
+}
+
+.company-info {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.company-info h3 {
+    color: var(--natural-highlight);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-family: 'Georgia', serif;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .top-cta {
+        position: static;
+        display: inline-block;
+        margin-top: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    header {
+        padding: 3rem 1rem 5rem;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
